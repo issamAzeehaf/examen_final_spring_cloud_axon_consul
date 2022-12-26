@@ -5,18 +5,13 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ma.azehaf.orderservice.commonapi.enums.StatusCommande;
-
-import java.util.Date;
 
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor
-public class Commande {
+public class LineCommande {
     @Id
     private String id;
-    private Date dateCommande;
-    private Date dateLivraison;
-    private String adresseLivraison;
-    private StatusCommande status;
-
+    private int quantiteProduit;
+    private double prixUnitaire;
+    private String remise;
 }
